@@ -16,7 +16,7 @@ function formDateHandler() {
     email: emailInputRef.value,
     message: textareaFieldRef.value,
   };
-  console.log(textareaFieldRef.value);
+
   localStorage.setItem(FORM_STORAGE_KEY, JSON.stringify(formDate));
 }
 
