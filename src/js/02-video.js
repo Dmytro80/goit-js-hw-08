@@ -9,7 +9,9 @@ player.on('timeupdate', throttle(onTimeupdateOfStorage, 1000));
 
 const stopTime = localStorage.getItem('videoplayer-current-time');
 
-player.setCurrentTime(stopTime);
+if (stopTime) {
+  player.setCurrentTime(stopTime);
+}
 
 function onTimeupdateOfStorage(data) {
   localStorage.setItem('videoplayer-current-time', data.seconds);
